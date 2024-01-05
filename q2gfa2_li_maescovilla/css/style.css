@@ -1,0 +1,74 @@
+*{margin: 0;}
+section{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+#banner{
+    background-color: black;
+}
+.pbodies{
+    display: inline-block;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+#terrain{
+    background: url(/images/4282332428.gif);
+    width:200px;
+    height:200px;
+    transition: 15s;
+    transform: translate(30vw, 60vh);
+    animation-name: terramotion;
+    animation-duration: 35s;
+    padding: 6px;
+}
+#gasgiant{
+    background: url(/images/3922138132.gif);
+    width:300px;
+    height:300px;
+    transform: translate(20vw, 20vh);
+    transition: 30s;
+    animation-name: gasmotion;
+    animation-duration: 40s;
+    padding: 8px;
+}
+#blackhole{
+    background: url(/images/1201643031.gif);
+    width:200px;
+    height:200px;
+    animation-name: blackmotion;
+    animation-duration: 20s;
+    transform: translate(35vw, 10vh);
+    animation: infinite;
+}
+#star{
+    background: url(/images/855011367.gif);
+    width:50px;
+    height:50px;
+    animation-name: starmotion;
+    animation-duration: 25s;
+    transform: translate(33vw, 25vh);
+}
+@keyframes terramotion{
+    from {transform: translate(30vw, 0vh) scale(0.2);}
+    50% {transform: translate(10vw, 10vh)scale(0.5);}
+    100% {transform: translate(45vw, 40vh)scale(1)rotate3d(90deg);}
+}
+@keyframes gasmotion{
+    from{transform: translate(40vw, 0vh)scale(0.1);}
+    50% {transform: translate(45vw, 40vh)scale(0.5);}
+    100% {transform: translate(20vw,20vh)scale(1)rotate3d(90deg);}
+}
+@keyframes blackmotion{
+    from{transform: translate(35vw,0vh)scale(0.1);}
+    50% {transform: translate(30vw, 30vh)scale(0.5) ;}
+    100% {transform: translate(50vw, 50vh)scale(1)matrix3d(3.0);}
+}
+@keyframes starmotion{
+    from{transform: translate(33vw,0vh)scale(0.1)}
+    50% {transform: translate(25vw, 30vh)scale(0.5) ;}
+    100% {transform: translate(33vw, 33vh)scale(1);}
+}
+
+
